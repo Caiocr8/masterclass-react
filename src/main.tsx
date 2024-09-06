@@ -1,6 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { Bell, BookmarkSimple, DotsThreeCircle, Envelope, FileText, Hash, House, User } from "phosphor-react";
+import { Bell, BookmarkSimple, DotsThreeCircle, Envelope, FileText, Hash, House, Sparkle, User } from "phosphor-react";
 import "./global.css";
 
 import twitterLogo from "./assets/logo-twitter.svg";
@@ -47,7 +47,27 @@ createRoot(document.getElementById("root") as HTMLElement).render(
         </nav>
         <button className="new-tweet">Tweet</button>
       </aside>
-      <div className="content">content</div>
+
+
+      <div className="content">
+        <main className="timeline">
+          <div className="timeline-header">
+            Home
+            <Sparkle />
+          </div>
+
+          <form className="new-tweet-form">
+            <label htmlFor="tweet">
+              <img src="https://github.com/Caiocr8.png" alt="Caio Andrade" />
+              <textarea id="tweet" placeholder="O que está acontecendo?"/>
+            </label>
+
+            <button type="submit">Tweet</button>
+          </form>
+          
+          <div className="separator" />
+        </main>
+      </div>
     </div>
   </StrictMode>
 );
